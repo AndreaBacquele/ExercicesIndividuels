@@ -4,8 +4,9 @@ total_allumettes = 50
 def je_retire_les_allumettes(allumettes_a_retirer):
    global total_allumettes
    total_allumettes -= allumettes_a_retirer
-   if total_allumettes <0:
-      total_allumettes = 0
+   if total_allumettes < 0 :
+      print ("Vous avez enlevé trop d'allumettes. Refaite un nouveau retrait.")
+      total_allumettes += allumettes_a_retirer
    print(total_allumettes)
 
 #Demande le nombre d'allumettes que l'on veut retirer / vérifie si c'est bien un nombre
@@ -19,8 +20,14 @@ def ask_player():
       ask_player()
    else :
       number = int(number)
-      if good_number(number) == True :
+      if good_number(number) is True :
          je_retire_les_allumettes(number)
+         if total_allumettes == 0 :
+            print ("Congratulations, you win")
+         elif total_allumettes < 0 : 
+            je_retire_les_allumettes(number)
+         else : 
+            ask_player()
       else :
           ask_player()
 
@@ -34,10 +41,17 @@ def good_number(number):
 
 #Check si on a gagné la partie
 def did_you_win(total_allumettes):
-    while total_allumettes != 0:
-        ask_player()
-    else:
-        print("you win")
+   ask_player()
+   if total_allumettes < 0 :
+      #Comment faire pour garder la valeur obtenue avant de refaire askPlayer
+      print("Vous avez enlevé trop d'allumettes. Vous devez tomber à 0 allumettes exactement")
+      ask_player()
+   elif total_allumettes == 0 :
+      print("Congratulations ! You win !")
+   else :
+      print
+
+         
 
 did_you_win(total_allumettes)
    
