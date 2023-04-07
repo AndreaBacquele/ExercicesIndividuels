@@ -26,8 +26,6 @@ def ask_player():
             print ("Congratulations, you win")
          elif total_allumettes < 0 : 
             je_retire_les_allumettes(number)
-         else : 
-            ask_player()
       else :
           ask_player()
 
@@ -51,44 +49,22 @@ def did_you_win(total_allumettes):
    else :
       print
 
-         
+def player_one():
+   print ("Player one : à vous de jouer")
+   did_you_win(total_allumettes)
 
-did_you_win(total_allumettes)
+def player_two():
+   print ("Player two : à vous de jouer")
+   did_you_win(total_allumettes)
+
+def one_turn():
+   #tant que total_allumettes !=0, on enchaine joueur 1 et joueur 2
+   while total_allumettes != 0:
+      player_one()
+      player_two()
+
+one_turn()
    
-
-
-
-
-
-
-
-
-# Tant que allumettes_depart !=0 , combien d'allumettes on enleve 
-# Demander combien d'allumettes on enléve 
-
-   #si le nombre d'allumette supérieur à 0 : input
-   #if allumettes > 0 :
-   #   allumettes_retrait = input ("Combien d'allumettes voulez-vous retirer? ")
-   #   print ("Nous allons donc retirer " + allumettes_retrait + " " + "allumettes")
-   #else : 
-   #   input ("Il ne reste plus assez d'allumette, enlevez moins d'allumettes")
-
-#demande_retrait_allumette(allumettes_depart)
-
-
-""" def retrait_allumette(allumettes):
-    allumettes_a_retirer = input ("Combien d'allumettes voulez-vous retirer? ")
-    nbr_allumettes_a_retirer = int(allumettes_a_retirer)
-    print ("Nous allons donc retirer " + allumettes_a_retirer + " " + "allumettes")
-    allumettes_maj = allumettes - nbr_allumettes_a_retirer
-    return allumettes_maj
- """
-
-""" print(retrait_allumette(allumettes_depart))
-print(retrait_allumette(20)) """
-
-
-
 #future interface graphique
 #from tkinter import *
 
