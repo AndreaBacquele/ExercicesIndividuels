@@ -8,19 +8,17 @@ function isValidDate(date){
     } else {
         return checkDate = false
     }
-return checkDate
 }
 
 // Vérifier si la date est bien au format dd/mm/aaaa
 function goodFormat(date){
     let format = date.split('')
     let check
-    if (format[2] == '/' && format [5] == '/'){
+    if (format[2] == '/' && format [5] == '/' && format.length == 10){
         return check = true
     } else {
         return check = false
     }
-    return check
 }
 
 // Vérifier si la date est bien comprise entre 999 et 10000
@@ -32,7 +30,6 @@ function goodYear(date){
         } else {
             return check = false
         }
-    return check
 }
 
 // Vérifie si le mois est bien compris entre 1 et 12; et si le mois a bien le bon nombre de jours
@@ -52,9 +49,8 @@ function maxDaysInMonth(date){
         else if ( arrMonth30.includes(takeMonth) && day<31 && day>0) {
             return check = true
         }
-        else {check = false}
+        else {return check = false}
 
-        return check
     }
     // switch (goodMonth){
     //     case '02' : return '28';
@@ -89,7 +85,6 @@ function isPalindrome(date){
     } else {
         return checkPalindrome = false
     }
-        return checkPalindrome
 }
 let testPalin = "11/02/2011"
 console.log(isPalindrome(testPalin)) //true
@@ -112,13 +107,12 @@ function getNextPalindromes(x){
         return arrPalindrome
 } 
 
-    // ajout un jour à la fois, et à force ça incrémente les mois 
-    // tant que ça n'est pas un palindrome : on continue 
-    // si c'est un palindrome : on met dans un tableau
   
     // dés que le tableau à x élement, on sort de la fonction
 
 console.log(getNextPalindromes(8))
+
+
 
 function isMyDatePalindrome(date){
     let checkDate
@@ -132,7 +126,6 @@ function isMyDatePalindrome(date){
          else {
             return checkDate = false
          }
-    return checkDate
     }
     
 console.log(isMyDatePalindrome("11/02/2011"))
