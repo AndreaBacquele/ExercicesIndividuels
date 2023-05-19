@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La suite de Conway</title>
+    <link href="Conway.css" rel="stylesheet">
     <script src="Conway.js"></script>
 </head>
 <body>
-    <p>Rentrer le caractére de départ : </p>
-    <input type="text" id="caractere"><br>
-    <p> Rentrer le nombre d'itération de la suite que vous voulez afficher : </p>
-    <input type="number" id="n fois">
-
-    <div id = "liste">
-        <p id="liste"></p>
+    <p>Rentrez le caractére de départ : </p>
+        <input type="text" id="caractere" placeholder="une lettre"><br>
+    <p> Rentrez le nombre d'itération de la suite que vous voulez afficher : </p>
+        <input type="number" id="n fois" placeholder="un nombre">
+    <button type="button" class="validation" onclick="suiteConway2()">Validez</button>
+    
+    <p id="suiteAffichee"></p>
     </div>
+    <script>
+    </script>
 </body>
 </html>

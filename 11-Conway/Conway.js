@@ -40,16 +40,17 @@ function decritChaine(string) {
 
 //Etape 3
 //Créer une fonction suiteConway qui donne les n premiers termes de la suite qui commence par le caractère carac. n et carac sont passés en paramètres de la fonction.
-
+// + affichage 
 function suiteConway(carac,n){
     console.log(carac)
-    //let liste = document.getElementById("liste")
+    document.getElementById("suiteAffichee").innerHTML = carac + "<br></br>"
     for (let i = 1; i<n; i++){
     carac = decritChaine(carac)
-    //liste.innerHTML += carac
+    document.getElementById("suiteAffichee").innerHTML += carac + "<br></br>"
     console.log(carac);
+    }
 }
-}
+
 suiteConway('a', 3)
 // a
 // 1a
@@ -59,3 +60,12 @@ suiteConway('1', 3)
 // 1
 // 11
 // 21
+
+// Etape 4 
+// Afficher la suite de Conway générée dans un navigateur. Utiliser un texte centré pour l'afficher sous forme de pyramide.
+function suiteConway2(){
+  let caractere = document.getElementById("caractere").value
+  let xFois = document.getElementById("n fois").value 
+  const bouton = document.getElementById("validation")
+  suiteConway(caractere,xFois)
+}
