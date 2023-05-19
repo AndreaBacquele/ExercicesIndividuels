@@ -43,8 +43,10 @@ function decritChaine(string) {
 
 function suiteConway(carac,n){
     console.log(carac)
+    //let liste = document.getElementById("liste")
     for (let i = 1; i<n; i++){
     carac = decritChaine(carac)
+    //liste.innerHTML += carac
     console.log(carac);
 }
 }
