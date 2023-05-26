@@ -11,5 +11,6 @@ Tous les exercices individuels réalisés dans le cadre de la formation Ada Tech
 10 - Motus : exercice de débugging d'un code JS + HTML 
 11 - Conway : réaliser la suite de Conway; en JS + test en Python
 12 - Calculatrice graphique : coder une calculatrice graphique à l'aide de Bootstrap
+14 - Tri : Découverte des algorithmes de tri bubble sort et quick sort; en Python
 
 
