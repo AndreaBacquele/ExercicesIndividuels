@@ -1,4 +1,30 @@
-#btn{
-    width: 100px;
-    background-color: red;
+.number{
+    width: 50px;
+    height: 50px;
 }
+
+.ecran{
+    background-color: black;
+    width: 210px;
+    height: 50px;
+    color: white;
+}
+
+/* 
+.no-padding > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+} */
+
+.container{
+    border: 5em;
+}
+
+.operation{
+    width: 50px;
+    height: 50px;
+}
+
+/* .calculatrice{
+    background-color: brown;
+} */
